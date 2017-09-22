@@ -1,0 +1,28 @@
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <div class="row">
+    <div class="col-sm-8">
+      <ul>
+        {{#each enemies}}
+          {{> enemy_status}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm-4 jumbotron">
+    <h2>Online players</h2>
+    <ul>
+       {{#each players}}
+          {{> online_player}}
+        {{/each}}
+    </ul>
+    </div>
+  </div>
+</body>
+
+<template name="enemy_status">
+  <li>Name: {{name}} - HP: {{actual_hp}}/{{total_hp}}</li>
+</template>
+
+<template name="online_player">
+  <li>{{text}}</li>
+</template>
