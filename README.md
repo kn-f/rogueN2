@@ -16,7 +16,7 @@ Currently every restart of the server resets HPs for players and enemies
 - maxHP
 - actualHP
 
-##Enemy
+## Enemy
 - name
 - arenaName (FK)
 - ATK
@@ -24,5 +24,5 @@ Currently every restart of the server resets HPs for players and enemies
 - maxHP *
 - actualHP *
 
-##Arena
+## Arena
 - name (PK)
