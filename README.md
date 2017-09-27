@@ -2,27 +2,27 @@
 Arena MMO
 # Setup
 npm install
-# DB Setup for testing
-meteor mongo
-db.players.insert({ name: "Player One", createdAt: new Date() });
-db.enemies.insert({ name: "Cookie Monster", actual_hp: 20, max_hp: 100, createdAt: new Date() });
-db.enemies.insert({ name: "Oooommm", actual_hp: 20, max_hp: 100, createdAt: new Date() });
 
-# Player
+# DB Setup for testing
+Already part of the start process
+Currently every restart of the server resets HPs for players and enemies
+
+# Data structure
+## Player
 - name
-- arenaName
+- arenaName (FK)
 - ATK
 - DEF
 - maxHP
 - actualHP
 
-#enemy
+##Enemy
 - name
-- arenaName
+- arenaName (FK)
 - ATK
 - DEF
 - maxHP *
 - actualHP *
 
-#arena
+##Arena
 - name (PK)
