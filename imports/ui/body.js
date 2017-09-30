@@ -9,11 +9,10 @@ Template.body.helpers({
   players() {
     return Players.find({});
   },
-});
-
-
-Template.body.helpers({
   enemies() {
     return Enemies.find({});
+  },
+  numberOfOnlinePlayers() {
+    return Players.find({}).count();
   },
 });

@@ -1,28 +1,24 @@
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to rogueN2!</h1>
+  <div class="container">
+    {{> loginButtons}}
+  </div>
   <div class="row">
     <div class="col-sm-8">
       <ul>
         {{#each enemies}}
-          {{> enemy_status}}
+          <li>Name: {{name}} - HP: {{actualHP}}/{{maxHP}}</li>
         {{/each}}
       </ul>
     </div>
     <div class="col-sm-4 jumbotron">
     <h2>Online players</h2>
+    Total online players: {{numberOfOnlinePlayers}}
     <ul>
        {{#each players}}
-          {{> online_player}}
+          <li>{{name}} - {{arenaName}} - HP: {{actualHP}}/{{maxHP}}</li>
         {{/each}}
     </ul>
     </div>
   </div>
 </body>
-
-<template name="enemy_status">
-  <li>Name: {{name}} - HP: {{actual_hp}}/{{max_hp}}</li>
-</template>
-
-<template name="online_player">
-  <li>{{name}}</li>
-</template>

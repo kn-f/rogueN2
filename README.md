@@ -4,9 +4,11 @@ Arena MMO
 npm install
 # DB Setup for testing
 meteor mongo
-db.players.insert({ name: "Player One", createdAt: new Date() });
-db.enemies.insert({ name: "Cookie Monster", actual_hp: 20, max_hp: 100, createdAt: new Date() });
-db.enemies.insert({ name: "Oooommm", actual_hp: 20, max_hp: 100, createdAt: new Date() });
+db.arenas.insert({name: "Base", createdAt: new Date()});
+db.players.insert({ name: "Player One", arenaName: "Base", ATK: 2, DEF: 2, maxHP: 100, actualHP: 100, createdAt: new Date() });
+db.players.insert({ name: "Weak Player", arenaName: "Base", ATK: 2, DEF: 1, maxHP: 100, actualHP: 100, createdAt: new Date() });
+db.enemies.insert({ name: "Cookie Monster", arenaName: "Base", ATK: 2, DEF: 1, maxHP: 100, actualHP: 100, createdAt: new Date() });
+db.enemies.insert({ name: "Oooommm", arenaName: "PIco", ATK: 2, DEF: 1, maxHP: 100, actualHP: 100, createdAt: new Date()});
 
 # Player
 - name
